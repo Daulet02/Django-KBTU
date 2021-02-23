@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <div class="header">
+      <a class="logo">TODO LIST</a>
+    </div>
+
+    <div class="container">
+
+        <div class="func-top">
+            <button class="btn btn-primary">Add Task</button>
+        </div>
+
+        <hr>
+
+        <h1>Completed Tasks</h1>
+
+        <hr>
+
+        <div>
+            <table class="table">
+              <thead class="thead">
+                <tr>
+                    <th scope="col">#</th>
+                    {% for item in headers %}
+                        <th scope="col">{{ item }}</th>
+                    {% endfor %}
+                </tr>
+              </thead>
+
+              <tbody>
+                 <tr>
+                  <th scope="col">0</th>
+                    {% for item in completed_tasks.task0 %}
+                        <td scope="col">{{ item.task }}</td>
+                        <td scope="col">{{ item.created }}</td>
+                        <td scope="col">{{ item.due }}</td>
+                        <td scope="col">{{ item.owner }}</td>
+                        {% if item.mark == True %}
+                           <td scope="col"><button class="btn btn-info">Done</button></td>
+                            {% else %}
+                            <td scope="col"><button class="btn btn-info btn-sm">Not Done</button></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+
+              </tbody>
+            </table>
+        </div>
+
+        <div class="func">
+            <button class="btn btn-warning">View completed tasks</button>
+            <button class="btn btn-danger">Delete this list</button>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+.test{
+    color: blue;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+  color: white;
+  font-family: Arial;
+  overflow: hidden;
+  background-color: black;
+}
+
+.header a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.header a.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.func-top{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.func{
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
