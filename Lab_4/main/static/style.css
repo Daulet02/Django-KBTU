@@ -1,0 +1,48 @@
+p {
+    color: white;
+    background-color: #000000;
+    margin: -10px;
+    padding: 20px;
+    font-size: large;
+}
+.main{
+    margin-left: 15%;
+    margin-top: 30px;
+    text-align: left;
+}
+button{
+    border-radius: 4px;
+    border: none;
+    padding: 8px;
+    color: white;
+    margin-bottom: 10px;
+}
+#add {
+    background-color: #157ffb;
+}
+.delete {
+    background-color: #da3749;
+}
+.tasks{
+    background-color: #fdc02f;
+    color: black;
+}
+.mark{
+    color: white;
+    background-color: #23a1b6;
+}
+table{
+    width: 75%;
+    border-collapse: separate;
+    margin-bottom: 50px;
+}
+td, th {
+    border-top: 1px solid #f1e9e9;
+    padding: 10px;
+}
+hr{
+    border-top-color: #cfc6c6;
+    margin-left: 0;
+    width: 75%;
+    border-top: none;
+}

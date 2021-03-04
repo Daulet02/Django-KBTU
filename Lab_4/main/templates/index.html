@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <p>DJANGO TODO LIST</p>
+
+<div class="main">
+    <button id="add">Add Task</button>
+    <hr>
+    <h1>
+        {% if not completed %}
+                Tasks in "{{ todo }}"
+        {% else %}
+                Completed tasks in "{{ todo }}"
+        {% endif %}
+    </h1>
+
+<table>
+    <tr>
+        <th>Task</th>
+        <th>Created</th>
+        <th>Due on</th>
+        <th>Owner</th>
+        <th>Mark</th>
+    </tr>
+
+
+
+    <tr>
+        {% block body %}
+        {% endblock %}
+    </tr>
+</table>
+
+<button class="tasks"> View completed tasks </button>
+<button class="delete"> Delete this list </button>
+</div>
+
+</body>
+</html>

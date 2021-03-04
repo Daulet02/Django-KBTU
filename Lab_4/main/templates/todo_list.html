@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block body %}
+    {% for task in tasks %}
+        <tr>
+            <td style="color: cornflowerblue">{{ task.task_name }}</td>
+            <td>{{ task.created }}</td>
+            <td>{{ task.due_on }}</td>
+            <td>{{ task.owner }}</td>
+            <td><button class="mark">
+                Not Done
+        </button></td>
+        </tr>
+    {% endfor %}
+{% endblock %}
